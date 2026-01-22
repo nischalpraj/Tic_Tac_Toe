@@ -60,7 +60,37 @@ body {
 .playery {
   margin-right: 5px;
 }
-.detail{
+.detail {
   background-color: #ffffff;
-
+  padding:7px;
+  border-radius: 5px;
+}
+.players {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.players span{
+  width:100%;
+  background-color: red;
+  border-radius: 7px;
+  padding:7px 0px;
+  font-size:19px;
+  font-weight:500;
+  cursor:default;
+  text-align: center;
+}
+.playarea {
+  margin-top: 20px;
+}
+.playboard section {
+  display: flex;
+}
+.playboard section span {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  margin: 3px;
+  border-radius: 7px;
 }
