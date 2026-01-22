@@ -80,8 +80,12 @@ body {
   font-weight:500;
   cursor:default;
   text-align: center;
+  position: relative;
+  z-index: 5;
 }
-
+.players span:first-child{
+  color:#ffffff;
+}
 .slider{
   position: absolute;
   top:0;
@@ -89,7 +93,8 @@ body {
   height:100%;
   width:50%;
   background-color: #56bae5;
-
+  border-radius: 5px;
+  z-index: 2;
 }
 .playarea {
   margin-top: 20px;
