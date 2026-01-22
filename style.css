@@ -97,4 +97,8 @@ body {
   background-color: #ffffff;
   margin: 3px;
   border-radius: 7px;
+  font-size: 110px;
+  text-align: center;
+  line-height: 150px;
+  color:#56bae5;
 }
