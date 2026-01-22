@@ -72,13 +72,17 @@ body {
 }
 .players span{
   width:100%;
-  background-color: red;
+  color:#56bae5;
   border-radius: 7px;
   padding:7px 0px;
-  font-size:19px;
+  font-size:24px;
   font-weight:500;
   cursor:default;
   text-align: center;
+}
+.players span.active{
+  color:#ffffff;
+ background-color: #56bae5;
 }
 .playarea {
   margin-top: 20px;
