@@ -69,6 +69,7 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  position: relative;
 }
 .players span{
   width:100%;
@@ -80,9 +81,15 @@ body {
   cursor:default;
   text-align: center;
 }
-.players span.active{
-  color:#ffffff;
- background-color: #56bae5;
+
+.slider{
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:50%;
+  background-color: #56bae5;
+
 }
 .playarea {
   margin-top: 20px;
