@@ -22,7 +22,12 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 390px;
   width: 100%;
-  /* display: none; */
+  transition: all 0.3s ease;
+}
+.selectbox.hide{
+  opacity: 0;
+  pointer-events: none;
+   transform: translate(-50%, -50%)  scale(0.9); 
 }
 .selectbox header {
   font-size: 28px;
