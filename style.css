@@ -122,8 +122,21 @@ body {
   background-color: #fff;
   padding:20px;
   border-radius: 5px;
+  max-width:350px;
+  width: 100%;
 }
 .wintext{
   font-size: 20px;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.wintext p{
+  font-weight: 700;
+  margin:0 3px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
 }
