@@ -121,7 +121,7 @@ body {
 .resultbox{
   background-color: #fff;
   padding:20px;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width:350px;
   width: 100%;
 }
@@ -139,4 +139,16 @@ body {
   display: flex;
   justify-content: center;
   margin-top:20px;
+}
+.btn button{
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #56bae5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
