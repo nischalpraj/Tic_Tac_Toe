@@ -52,7 +52,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.option button:hover {
+.option button:hover,
+.btn button:hover {
   transform: scale(0.96);
 }
 .playerx {
@@ -118,29 +119,29 @@ body {
   line-height: 150px;
   color: #56bae5;
 }
-.resultbox{
+.resultbox {
   background-color: #fff;
-  padding:20px;
+  padding: 20px;
   border-radius: 10px;
-  max-width:350px;
+  max-width: 350px;
   width: 100%;
 }
-.wintext{
+.wintext {
   font-size: 20px;
   font-weight: 500;
   display: flex;
   justify-content: center;
 }
-.wintext p{
+.wintext p {
   font-weight: 700;
-  margin:0 3px;
+  margin: 0 3px;
 }
-.btn{
+.btn {
   display: flex;
   justify-content: center;
-  margin-top:20px;
+  margin-top: 20px;
 }
-.btn button{
+.btn button {
   font-size: 18px;
   font-weight: 500;
   border: none;
