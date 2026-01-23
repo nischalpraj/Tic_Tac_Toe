@@ -8,7 +8,8 @@ body {
   background-color: #56bae5;
 }
 .selectbox,
-.playboard {
+.playboard,
+.resultbox {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,9 +61,12 @@ body {
 .playery {
   margin-right: 5px;
 }
+.playboard {
+  display: none;
+}
 .detail {
   background-color: #ffffff;
-  padding:7px;
+  padding: 7px;
   border-radius: 5px;
 }
 .players {
@@ -71,27 +75,27 @@ body {
   justify-content: space-between;
   position: relative;
 }
-.players span{
-  width:100%;
-  color:#56bae5;
+.players span {
+  width: 100%;
+  color: #56bae5;
   border-radius: 7px;
-  padding:7px 0px;
-  font-size:24px;
-  font-weight:500;
-  cursor:default;
+  padding: 7px 0px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: default;
   text-align: center;
   position: relative;
   z-index: 5;
 }
-.players span:first-child{
-  color:#ffffff;
+.players span:first-child {
+  color: #ffffff;
 }
-.slider{
+.slider {
   position: absolute;
-  top:0;
-  left:0;
-  height:100%;
-  width:50%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
   background-color: #56bae5;
   border-radius: 5px;
   z-index: 2;
@@ -112,5 +116,14 @@ body {
   font-size: 110px;
   text-align: center;
   line-height: 150px;
-  color:#56bae5;
+  color: #56bae5;
+}
+.resultbox{
+  background-color: #fff;
+  padding:20px;
+  border-radius: 5px;
+}
+.wintext{
+  font-size: 20px;
+  font-weight: 500;
 }
