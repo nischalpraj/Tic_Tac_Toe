@@ -7,10 +7,11 @@ const selectbox = document.querySelector(".selectbox"),
 window.onload = () => {
   //when window loads
   selectXbtn.onclick = () => {
-      selectbox.classList.add("hide");//hide the pplay box when x is clicked
-      playboard.classList.add("show");//show playboard when x is clicked
+    selectbox.classList.add("hide"); //hide the pplay box when x is clicked
+    playboard.classList.add("show"); //show playboard when x is clicked
   };
   selectobtn.onclick = () => {
     selectbox.classList.add("hide");
+    playboard.classList.add("show");
   };
 };
