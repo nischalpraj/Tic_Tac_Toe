@@ -8,10 +8,10 @@ const selectbox = document.querySelector(".selectbox"),
 window.onload = () => {
   //when window loads
 
-  // for (let i = 0; i < Array.length; i++) {
-  //   //add onclickt attritbute on all available section's span
-  //   (allbox[i], setAttribute("onclick", "clickedbox(this)"));
-  // }
+  for (let i = 0; i < Array.length; i++) {
+    //add onclickt attritbute on all available section's span
+    allbox[i].setAttribute("onclick", "clickedbox(this)");
+  }
   selectXbtn.onclick = () => {
     selectbox.classList.add("hide"); //hide the pplay box when x is clicked
     playboard.classList.add("show"); //show playboard when x is clicked
