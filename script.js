@@ -2,6 +2,7 @@
 const selectbox = document.querySelector(".selectbox"),
   selectXbtn = selectbox.querySelector(".playerx"),
   selectobtn = selectbox.querySelector(".playero"),
+  allbox=document.querySelectorAll("section span"),
   playboard = document.querySelector(".playboard");
 
 window.onload = () => {
