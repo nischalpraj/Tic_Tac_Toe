@@ -28,5 +28,5 @@ let playerXicon = "fas fa-times";
 let player0icon = "far fa-circle";
 
 function clickedbox(element) {
-  if()
+ 
 }
