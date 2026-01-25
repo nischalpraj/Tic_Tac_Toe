@@ -21,3 +21,6 @@ window.onload = () => {
     playboard.classList.add("show");
   };
 };
+
+let playerXicon = "fas fa-times";
+let player0icon = "far fa-circle";
