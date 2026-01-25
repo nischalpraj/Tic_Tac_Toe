@@ -24,8 +24,8 @@ window.onload = () => {
   };
 };
 
-let playerXicon = "fas fa-times";
-let player0icon = "far fa-circle";
+let playerXicon = "fa-solid fa-xmark";
+let player0icon = "fa-regular fa-circle";
 
 function clickedbox(element) {
   if (players.classList.contains("player")) {
