@@ -9,7 +9,7 @@ const selectbox = document.querySelector(".selectbox"),
 window.onload = () => {
   //when window loads
 
-  for (let i = 0; i < Array.length; i++) {
+  for (let i = 0; i < allbox.length; i++) {
     //add onclickt attritbute on all available section's span
     allbox[i].setAttribute("onclick", "clickedbox(this)");
   }
@@ -20,11 +20,11 @@ window.onload = () => {
   selectobtn.onclick = () => {
     selectbox.classList.add("hide");
     playboard.classList.add("show");
-    players.setAttribute("class", "players active player");
+    players.classList.add("active", "player");
   };
 };
 
-let playerXicon = "fa-solid fa-xmark";
+let playerXicon = "fa-solid fa-x";
 let player0icon = "fa-regular fa-circle";
 
 function clickedbox(element) {
