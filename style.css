@@ -120,7 +120,7 @@ body {
 .players.active span:first-child{
 color:#56bae5;
 }
-.players.active span:last-ch{
+.players.active span:nth-child(2){
 color:#fff;
 }
 .players.active .slider{
