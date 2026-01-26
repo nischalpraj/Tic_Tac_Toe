@@ -52,6 +52,15 @@ function bot() {
     }
   }
   let randomBox = array[Math.floor(Math.random() * array.length)];
-  console.log(randomBox)
+  console.log(randomBox);
+  if (array.length > 0) {
+    if (players.classList.contains("player")) {
+      allbox[randomBox].innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
+      players.classList.add("active");
+    } else {
+      allbox[randomBox].innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
+      players.classList.add("active");
+    }
+  }
   console.log(array);
 }
