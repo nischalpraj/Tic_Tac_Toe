@@ -51,5 +51,7 @@ function bot() {
       console.log(i + " " + "has no children");
     }
   }
+  let randomBox = array[Math.floor(Math.random() * array.length)];
+  console.log(randomBox)
   console.log(array);
 }
