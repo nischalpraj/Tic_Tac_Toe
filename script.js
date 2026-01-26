@@ -28,9 +28,11 @@ let playerXicon = "fa-solid fa-x";
 let player0icon = "fa-regular fa-circle";
 
 function clickedbox(element) {
+  console.log(element)
   if (players.classList.contains("player")) {
-    element.innerHTML = `<i class="${player0icon}"></i>`;
+    element.innerHTML = `<i class="${player0icon}"></i>`;//adding circle icon at user clicked element
   } else {
-    element.innerHTML = `<i class="${playerXicon}"></i>`;
+    element.innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
   }
+  element.style.pointerEvents = "none";
 }
