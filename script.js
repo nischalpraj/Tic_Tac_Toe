@@ -38,11 +38,11 @@ function clickedbox(element) {
     players.classList.add("active");
   }
   element.style.pointerEvents = "none";
-  let randomDelaytime = ((Math.random() * 1000) + 200).toFixed();//generating random delay time to make bot delay randomly to select box 
+  let randomDelaytime = (Math.random() * 1000 + 200).toFixed(); //generating random delay time to make bot delay randomly to select box
   console.log(randomDelaytime);
   setTimeout(() => {
-    bot();//calling bot function
-  },randomDelaytime)//passing random delay time
+    bot(); //calling bot function
+  }, randomDelaytime); //passing random delay time
 }
 
 //bot click function
@@ -63,8 +63,8 @@ function bot() {
       players.classList.add("active");
     } else {
       allbox[randomBox].innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
-      players.classList.add("active");
+      players.classList.remove("active");
     }
   }
-  allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
+  allbox[randomBox].style.pointerEvents = "none"; //once bot select any box user cannot seslect same box
 }
