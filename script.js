@@ -27,22 +27,29 @@ window.onload = () => {
 let playerXicon = "fa-solid fa-x";
 let player0icon = "fa-regular fa-circle";
 
-
 //user click function
 function clickedbox(element) {
-  console.log(element)
+  console.log(element);
   if (players.classList.contains("player")) {
-    element.innerHTML = `<i class="${player0icon}"></i>`;//adding circle icon at user clicked element
+    element.innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
     players.classList.add("active");
   } else {
     element.innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
     players.classList.add("active");
-
   }
   element.style.pointerEvents = "none";
+  bot();
 }
 
 //bot click function
 function bot() {
-  
+  let array = []; //creating empty array
+  for (let i = 0; i < allbox.length; i++) {
+    if (allbox[i].childElementCount == 0) {
+      //if span has no any child element
+      array.push(i); //inserting unclicked or unselected box inside array means that span has no children
+      console.log(i + " " + "has no children");
+    }
+  }
+  console.log(array);
 }
