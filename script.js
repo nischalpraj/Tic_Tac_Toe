@@ -38,7 +38,11 @@ function clickedbox(element) {
     players.classList.add("active");
   }
   element.style.pointerEvents = "none";
-  bot();
+  let randomDelaytime = ((Math.random() * 1000) + 200).toFixed();//generating random delay time to make bot delay randomly to select box 
+  console.log(randomDelaytime);
+  setTimeout(() => {
+    bot();//calling bot function
+  },randomDelaytime)//passing random delay time
 }
 
 //bot click function
