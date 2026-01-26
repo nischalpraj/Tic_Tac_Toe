@@ -41,3 +41,8 @@ function clickedbox(element) {
   }
   element.style.pointerEvents = "none";
 }
+
+//bot click function
+function bot() {
+  
+}
