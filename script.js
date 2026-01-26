@@ -66,5 +66,5 @@ function bot() {
       players.classList.add("active");
     }
   }
-  console.log(array);
+  allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
 }
