@@ -70,6 +70,7 @@ function bot() {
       players.classList.remove("active");
       allbox[randomBox].setAttribute("id", playersign);
     }
+    selectWinner();
   }
   allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
   playersign = "X";
