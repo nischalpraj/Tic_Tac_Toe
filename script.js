@@ -81,3 +81,9 @@ function bot() {
 function getClass(idname){
   return document.querySelector(".box" + idname).id;// returning id name
 }
+
+function checkThreeClasses(val1,val2,val3,sign) {
+  if (getClass(val1) == sign && getClass(val2) == sign && getClass(val3) == sign) {
+    return true;
+  }
+}
