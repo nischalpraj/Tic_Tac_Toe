@@ -82,8 +82,14 @@ function getClass(idname){
   return document.querySelector(".box" + idname).id;// returning id name
 }
 
-function checkThreeClasses(val1,val2,val3,sign) {
+function checkClasses(val1,val2,val3,sign) {
   if (getClass(val1) == sign && getClass(val2) == sign && getClass(val3) == sign) {
     return true;
+  }
+}
+
+function selectWinner() {
+  if (checkClasses(1, 2, 3, playersign) || checkClasses(4, 5, 6, playersign) || checkClasses(7, 8, 9, playersign) || checkClasses(1, 4, 7, playersign) || checkClasses(2, 5, 8, playersign) || checkClasses(3, 6, 9, playersign) || checkClasses(1, 5, 9, playersign) || checkClasses(7, 5, 3, playersign)) {
+    console.log(playersign + " " + "is the winner");
   }
 }
