@@ -30,7 +30,6 @@ let playersign = "X"; //suppose player sign is X
 
 //user click function
 function clickedbox(element) {
-  console.log(element);
   if (players.classList.contains("player")) {
     element.innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
     players.classList.add("active");
@@ -41,9 +40,9 @@ function clickedbox(element) {
     players.classList.add("active");
     element.setAttribute("id", playersign);
   }
+  selectWinner();
   element.style.pointerEvents = "none";
   let randomDelaytime = (Math.random() * 1000 + 200).toFixed(); //generating random delay time to make bot delay randomly to select box
-  console.log(randomDelaytime);
   setTimeout(() => {
     bot(); //calling bot function
   }, randomDelaytime); //passing random delay time
@@ -57,11 +56,9 @@ function bot() {
     if (allbox[i].childElementCount == 0) {
       //if span has no any child element
       array.push(i); //inserting unclicked or unselected box inside array means that span has no children
-      console.log(i + " " + "has no children");
     }
   }
   let randomBox = array[Math.floor(Math.random() * array.length)];
-  console.log(randomBox);
   if (array.length > 0) {
     if (players.classList.contains("player")) {
       allbox[randomBox].innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
@@ -74,7 +71,8 @@ function bot() {
       allbox[randomBox].setAttribute("id", playersign);
     }
   }
-  allbox[randomBox].style.pointerEvents = "none"; //once bot select any box user cannot seslect same box
+  allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
+  playersign = "X";
 }
 
 
