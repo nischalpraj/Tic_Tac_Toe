@@ -78,6 +78,6 @@ function bot() {
 }
 
 
-function getClass(){
-  return document.querySelector("").id;// returning id name
+function getClass(idname){
+  return document.querySelector(".box" + idname).id;// returning id name
 }
