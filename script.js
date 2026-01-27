@@ -26,6 +26,7 @@ window.onload = () => {
 
 let playerXicon = "fa-solid fa-x";
 let player0icon = "fa-regular fa-circle";
+let playersign = "X"; //suppose player sign is X
 
 //user click function
 function clickedbox(element) {
@@ -33,9 +34,12 @@ function clickedbox(element) {
   if (players.classList.contains("player")) {
     element.innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
     players.classList.add("active");
+    playersign = "O";
+    element.setAttribute("id", playersign);
   } else {
     element.innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
     players.classList.add("active");
+    element.setAttribute("id", playersign);
   }
   element.style.pointerEvents = "none";
   let randomDelaytime = (Math.random() * 1000 + 200).toFixed(); //generating random delay time to make bot delay randomly to select box
