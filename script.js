@@ -51,6 +51,7 @@ function clickedbox(element) {
 
 //bot click function
 function bot() {
+  playersign = "O";
   let array = []; //creating empty array
   for (let i = 0; i < allbox.length; i++) {
     if (allbox[i].childElementCount == 0) {
@@ -65,9 +66,12 @@ function bot() {
     if (players.classList.contains("player")) {
       allbox[randomBox].innerHTML = `<i class="${playerXicon}"></i>`; //adding cross icon at user clicked element
       players.classList.add("active");
+      playersign = "X";
+      allbox[randomBox].setAttribute("id", playersign);
     } else {
       allbox[randomBox].innerHTML = `<i class="${player0icon}"></i>`; //adding circle icon at user clicked element
       players.classList.remove("active");
+      allbox[randomBox].setAttribute("id", playersign);
     }
   }
   allbox[randomBox].style.pointerEvents = "none"; //once bot select any box user cannot seslect same box
