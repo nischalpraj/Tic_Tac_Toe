@@ -27,6 +27,7 @@ window.onload = () => {
 let playerXicon = "fa-solid fa-x";
 let player0icon = "fa-regular fa-circle";
 let playersign = "X"; //suppose player sign is X
+let runBot = true;
 
 //user click function
 function clickedbox(element) {
@@ -45,13 +46,13 @@ function clickedbox(element) {
   element.style.pointerEvents = "none";
   let randomDelaytime = (Math.random() * 1000 + 200).toFixed(); //generating random delay time to make bot delay randomly to select box
   setTimeout(() => {
-    bot(); //calling bot function
+    bot(runBot); //calling bot function
   }, randomDelaytime); //passing random delay time
 }
 
 //bot click function
-function bot() {
-  playersign = "O";
+function bot(runBot) {
+  if(runBot){playersign = "O";
   let array = []; //creating empty array
   for (let i = 0; i < allbox.length; i++) {
     if (allbox[i].childElementCount == 0) {
@@ -75,7 +76,7 @@ function bot() {
   }
   allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
   playboard.style.pointerEvents = "auto";
-  playersign = "X";
+  playersign = "X";}
 }
 
 
@@ -92,5 +93,8 @@ function checkClasses(val1,val2,val3,sign) {
 function selectWinner() {
   if (checkClasses(1, 2, 3, playersign) || checkClasses(4, 5, 6, playersign) || checkClasses(7, 8, 9, playersign) || checkClasses(1, 4, 7, playersign) || checkClasses(2, 5, 8, playersign) || checkClasses(3, 6, 9, playersign) || checkClasses(1, 5, 9, playersign) || checkClasses(7, 5, 3, playersign)) {
     console.log(playersign + " " + "is the winner");
+    //once match won by someone then stop the bot
+    runBot = false;
+    bot(runBot);
   }
 }
