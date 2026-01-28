@@ -41,6 +41,7 @@ function clickedbox(element) {
     element.setAttribute("id", playersign);
   }
   selectWinner();
+  playboard.style.pointerEvents = "none";//once user select the box the user cannot select another box until bot selects the box
   element.style.pointerEvents = "none";
   let randomDelaytime = (Math.random() * 1000 + 200).toFixed(); //generating random delay time to make bot delay randomly to select box
   setTimeout(() => {
@@ -73,6 +74,7 @@ function bot() {
     selectWinner();
   }
   allbox[randomBox].style.pointerEvents = "none";//once bot select any box user cannot seslect same box
+  playboard.style.pointerEvents = "auto";
   playersign = "X";
 }
 
