@@ -105,12 +105,19 @@ function selectWinner() {
 
     }, 500)
     
-    wontext.innerHTML = `Player <p>${playersign}</p> won the match`;
+    wontext.innerHTML = `Player <p>${playersign}</p> won the match!`;
   }
   else {
     //if match is drawn
     if (getClass(1) != "" && getClass(2) != "" && getClass(3) != "" && getClass(4) != "" && getClass(5) != "" && getClass(6) != "" && getClass(7) != "" && getClass(8) != "" && getClass(9) != "") {
-      
+        runBot = false;
+        bot(runBot);
+        setTimeout(() => {
+          playboard.classList.remove("show");
+          resultbox.classList.add("show");
+        }, 500);
+
+        wontext.textContent = `It's a Draw!`;
     }
   }
 }
