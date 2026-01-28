@@ -4,7 +4,10 @@ const selectbox = document.querySelector(".selectbox"),
   selectobtn = selectbox.querySelector(".playero"),
   allbox = document.querySelectorAll("section span"),
   players = document.querySelector(".players"),
-  playboard = document.querySelector(".playboard");
+  playboard = document.querySelector(".playboard"),
+  resultbox = document.querySelector(".resultbox"),
+  wontext = resultbox.querySelector(".wintext"),
+  replaybutton= resultbox.querySelector("button");
 
 window.onload = () => {
   //when window loads
@@ -96,5 +99,10 @@ function selectWinner() {
     //once match won by someone then stop the bot
     runBot = false;
     bot(runBot);
+    setTimeout(() => {
+      playboard.classList.remove("show");
+      resultbox.classList.add("show");
+
+    },700)
   }
 }
