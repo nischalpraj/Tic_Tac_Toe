@@ -121,3 +121,7 @@ function selectWinner() {
     }
   }
 }
+
+replaybutton.onclick = () => {
+  window.location.reload()// reload current page
+}
